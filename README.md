@@ -14,6 +14,7 @@ Users can log on with a google account to add items to the webpage.
 * Vagrant
 * VirtualBox
 
+**Running the Webpage**
 * Download or clone this repo.
 * Run the VM provided by Udacity - "vagrant up" and "vagrant ssh"
 * Run python /vagrant/catalog/catalog_website.py
