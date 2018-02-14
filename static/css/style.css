@@ -1,0 +1,13 @@
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+div {
+  border-style: dashed;
+}
+.header {
+  border-style: solid;
+  border-width: 2px;
+}
+.pane {
+  border-style: dashed;
+}

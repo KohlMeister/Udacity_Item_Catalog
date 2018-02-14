@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="sidebar inline-block">
+    <p>Latest Drinks Added</p>
+    {% for j in items %}
+      {{ j.itemName }}
+      <br>
+      {{ j.itemDesc }}
+      <br>
+    {% endfor %}
+  </div>
+{% endblock %}

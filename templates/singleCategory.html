@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+  <body>
+    {% for j in category %}
+      <p>Category Information:</p>
+      {{ j.categoryDesc }}
+      ({{ count }} Drinks)
+      <br>
+      <a href='{{url_for('editCategory', categoryId = j.categoryId)}}'>Edit Drink Category Name</a>
+      <br>
+      <a href='{{url_for('deleteCategory', categoryId = j.categoryId)}}'>Delete Category</a>
+      <br>
+    {% endfor %}
+    <br>
+    {% for i in items %}
+      {% for j in category %}
+      <a href='{{url_for('showItem', categoryId = j.categoryId, itemId = i.itemId)}}'>{{ i.itemName }}</a>
+      <br>
+      {% endfor %}
+    {% endfor %}
+    {% for j in category %}
+    <a href='{{url_for('newItem', categoryId = j.categoryId)}}'>Add New Drink</a>
+    {% endfor %}
+  </body>
+{% endblock %}

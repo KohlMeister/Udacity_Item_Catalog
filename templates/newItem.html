@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+  <body>
+    <p>New Drink for {{i.categoryDesc}}</p>
+    <form action="{{url_for('newItem', categoryId = i.categoryId)}}" method = 'post'>
+      <p>Item:</p>
+        Drink Name:<br><input type='text' size='30' name='name'><br>
+        Drink Description:<br><input type='text' size='200' name='description'><br><br>
+        <input type='submit' value='Create'>
+        <a href='{{url_for('showCatalog')}}'>Cancel</a>
+      </form>
+  </body>
+{% endblock %}
